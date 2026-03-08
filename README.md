@@ -1,4 +1,4 @@
-This theme completely removes the stock header and icon!
+This theme completely removes the stock header and icon! (click for youtube video with animations)
 
 [![Cyber Neon Demo](https://img.youtube.com/vi/x27mJT_q5PA/maxresdefault.jpg)](https://youtu.be/x27mJT_q5PA)
 
