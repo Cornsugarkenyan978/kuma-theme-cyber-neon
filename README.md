@@ -7,12 +7,13 @@ Since this removes the default icon and title text from view, set your desired s
 *there is currently an issue where the title appears to right if you do not leave it blank. working on fixing that**
 
 ### Usage
-1. Copy your chosen variant into Uptime Kuma's custom CSS block.
-2. Find the header line with ctrl+f or however and change the text between the brackets to whatever you want:
+1. Select Dark as the page preference instead of automatic or light.
+2. Copy your chosen variant into Uptime Kuma's custom CSS block.
+3. Find the header line with ctrl+f or however and change the text between the brackets to whatever you want:
 
        content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
 
-   If you selected darkmode:
+   If you selected darkmode (theme not page mode):
 
         content: "[ SUDOCAT.DEV // SYS_STATUS ]" !important;
 
