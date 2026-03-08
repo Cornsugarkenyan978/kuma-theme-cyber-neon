@@ -529,3 +529,6 @@ h1::after, h2::after, h3::after, .group-title::after {
     text-shadow: 0 0 5px var(--v3-cyan) !important;
     border-radius: 2px !important;
 }
+span[data-v-7d4a7f28][data-v-007873bc] {
+    display: none !important;
+}
