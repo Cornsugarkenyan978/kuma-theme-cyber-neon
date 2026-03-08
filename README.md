@@ -1,5 +1,6 @@
 This theme completely removes the stock header and icon!
-Gemini Pro did a lot of the lifting unfortunately to "break" kuma enough to work this way.
+
+[![Cyber Neon Demo](https://img.youtube.com/vi/x27mJT_q5PA/maxresdefault.jpg)](https://youtu.be/x27mJT_q5PA)
 
 **PLEASE SET DESIRED ICON & TITLE FOR SITE PRIOR TO USING THIS**
 
