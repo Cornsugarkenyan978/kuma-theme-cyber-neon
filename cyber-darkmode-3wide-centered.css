@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    --sc-cyan:   #00d4e8;
+    --sc-yellow: #e8b800;
+    --sc-red:    #c8203a;
+    --sc-dark:   #07090c;
+    --sc-panel:  rgba(8, 14, 18, 0.92);
+}
+
+body, html, #app, .bg-dark, .bg-light, .status-page {
+    background-color: var(--sc-dark) !important;
+    background-image:
+        linear-gradient(rgba(0, 212, 232, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 232, 0.025) 1px, transparent 1px),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.15) 2px,
+            rgba(0, 0, 0, 0.15) 4px
+        ) !important;
+    background-size: 32px 32px, 32px 32px, 100% 100% !important;
+    background-attachment: fixed !important;
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.shadow-box, .card, .monitor-list > div,
+.incident-list, .incident-wrapper, .incident-container, .status-page .shadow-box {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-brand img, .navbar-brand svg, .navbar-brand span,
+.user-avatar, .user-avatar img, .user-avatar svg,
+header .dropdown-toggle svg, header .dropdown-toggle img,
+.username, .logo-wrapper img, .logo-wrapper svg {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+header .container, header .container-fluid, .status-page .header .container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.navbar-brand, .logo-wrapper {
+    color: transparent !important;
+    text-decoration: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 60px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-brand::after, .logo-wrapper::after {
+    content: "[ SUDOCAT.DEV // SYS_STATUS ]" !important;
+    position: relative !important;
+    color: #ffffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 2.2rem !important;
+    letter-spacing: 6px !important;
+    white-space: nowrap !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        -3px 0px 0px rgba(200, 32, 58, 0.75),
+        3px 0px 0px rgba(0, 212, 232, 0.75) !important;
+    animation:
+        sc-crt-flicker 6s infinite linear,
+        sc-glitch-chroma 4s infinite linear !important;
+}
+
+/* CRT subtle flicker */
+@keyframes sc-crt-flicker {
+    0%, 94%, 96%, 100% { opacity: 1; }
+    95% { opacity: 0.85; }
+}
+
+/* Chromatic aberration glitch — mirrors the sudocat.dev title style */
+@keyframes sc-glitch-chroma {
+    0%, 17%, 19%, 21%, 23%, 69%, 71%, 100% {
+        text-shadow:
+            0 0 8px rgba(255, 255, 255, 0.8),
+            -3px 0px 0px rgba(200, 32, 58, 0.75),
+            3px 0px 0px rgba(0, 212, 232, 0.75);
+        transform: translate(0, 0);
+        clip-path: none;
+    }
+    18% {
+        text-shadow:
+            -6px 0 0 rgba(200, 32, 58, 0.9),
+            6px 0 0 rgba(0, 212, 232, 0.9);
+        transform: translate(-3px, 1px);
+    }
+    20% {
+        text-shadow:
+            5px 0 0 rgba(200, 32, 58, 0.85),
+            -5px 0 0 rgba(0, 212, 232, 0.85);
+        transform: translate(3px, -1px);
+    }
+    70% {
+        text-shadow:
+            -4px 2px 0 rgba(200, 32, 58, 0.8),
+            4px -2px 0 rgba(0, 212, 232, 0.8);
+        transform: translate(-2px, 0);
+        opacity: 0.9;
+    }
+}
+
+.container, .container-fluid, .container-xl, .container-lg,
+.container-md, .container-sm {
+    max-width: 1800px !important;
+    width: 95% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.shadow-box.monitor-list {
+    display: block !important;
+    width: 95% !important;
+    max-width: 1800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+.monitor-list .monitor-list,
+.service-status-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-items: start !important;
+    gap: 25px !important;
+    padding: 20px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 1200px) {
+    .monitor-list .monitor-list,
+    .service-status-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .monitor-list .monitor-list,
+    .service-status-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.item, .service-item {
+    position: relative !important;
+    background: var(--sc-panel) !important;
+    border: 1px solid rgba(0, 212, 232, 0.25) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(0, 212, 232, 0.08) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease !important;
+    overflow: hidden;
+    padding: 25px 20px 20px 25px !important;
+    height: auto !important;
+    min-height: 140px !important;
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+}
+
+.item::before, .service-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(to bottom, var(--sc-cyan), transparent 80%);
+    box-shadow: 1px 0 10px rgba(0, 212, 232, 0.4);
+    z-index: 10;
+}
+
+.item::after, .service-item::after {
+    content: "SYS_NODE // ACTIVE";
+    position: absolute;
+    top: 8px; right: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.5rem;
+    color: var(--sc-yellow);
+    letter-spacing: 2px;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+.item:hover, .service-item:hover {
+    transform: translateY(-4px) scale(1.015);
+    border-color: rgba(0, 212, 232, 0.55) !important;
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.8),
+        0 8px 24px rgba(0, 212, 232, 0.12) !important;
+    z-index: 100;
+}
+
+.item .row, .service-item .row {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.item .col-9, .item .col-8, .item .col-sm-8, .item .col-3, .item .col-4, .item .col-sm-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    text-align: left !important;
+    margin-bottom: 12px !important;
+}
+
+.item-name, .service-name {
+    display: block !important;
+    width: 100% !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+    color: #ffffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    letter-spacing: 1px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(0, 212, 232, 0.2) !important;
+    padding-bottom: 8px !important;
+    position: relative;
+    z-index: 20;
+}
+
+.item-name::before, .service-name::before {
+    content: "";
+    position: absolute;
+    top: -30px; left: -150%; width: 50%; height: 100px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 232, 0.12), transparent);
+    transform: skewX(-20deg);
+    animation: sc-scan 5s infinite linear;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes sc-scan {
+    0% { left: -150%; }
+    100% { left: 250%; }
+}
+
+.item .info, .service-item .info, .uptime, .ping {
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3) !important;
+    width: 100% !important;
+    z-index: 20;
+    position: relative;
+}
+
+.item .info span, .service-item .info span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.chart-wrapper canvas, canvas {
+    filter: drop-shadow(0px 0px 4px rgba(0, 212, 232, 0.5)) !important;
+    opacity: 0.95;
+    margin-top: 5px !important;
+    z-index: 20;
+    position: relative;
+    width: 100% !important;
+}
+
+.badge {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 6px 15px 6px 22px !important;
+    border-radius: 0 !important;
+    position: relative;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    background-color: transparent !important;
+    backdrop-filter: blur(4px);
+    z-index: 20;
+    display: inline-block !important;
+}
+
+.badge::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.badge.bg-success {
+    border: 1px solid var(--sc-cyan) !important;
+    color: var(--sc-cyan) !important;
+    background: rgba(0, 212, 232, 0.06) !important;
+    box-shadow: inset 0 0 12px rgba(0, 212, 232, 0.08);
+    text-shadow: 0 0 6px rgba(0, 212, 232, 0.6);
+}
+
+.badge.bg-success::before {
+    background-color: var(--sc-cyan);
+    box-shadow: 0 0 6px var(--sc-cyan);
+    animation: sc-breathe 2.5s infinite ease-in-out;
+}
+
+.badge.bg-danger {
+    border: 1px solid var(--sc-red) !important;
+    color: var(--sc-red) !important;
+    background: rgba(200, 32, 58, 0.08) !important;
+    box-shadow: 0 0 12px rgba(200, 32, 58, 0.35), inset 0 0 15px rgba(200, 32, 58, 0.12);
+    animation: sc-alert-pulse 1.2s infinite ease-in-out;
+}
+
+.badge.bg-danger::before {
+    background-color: var(--sc-red);
+    box-shadow: 0 0 8px var(--sc-red);
+}
+
+@keyframes sc-breathe {
+    0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+    50% { opacity: 0.25; transform: translateY(-50%) scale(0.7); }
+}
+
+@keyframes sc-alert-pulse {
+    0%, 100% { box-shadow: 0 0 12px rgba(200, 32, 58, 0.35), inset 0 0 15px rgba(200, 32, 58, 0.12); }
+    50% { box-shadow: 0 0 22px rgba(200, 32, 58, 0.6), inset 0 0 20px rgba(200, 32, 58, 0.2); }
+}
+
+h1, h2, h3, .group-title {
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    color: var(--sc-cyan) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+    text-shadow: 0 0 8px rgba(0, 212, 232, 0.5), 0px 2px 2px rgba(0,0,0,0.8) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 95% !important;
+    max-width: 1800px !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 50px !important;
+    margin-bottom: 25px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+}
+
+h1::before, h2::before, h3::before, .group-title::before {
+    content: "" !important;
+    flex-grow: 1 !important;
+    height: 1px !important;
+    background: linear-gradient(270deg, var(--sc-cyan) 0%, transparent 100%) !important;
+    margin-right: 25px !important;
+    opacity: 0.4 !important;
+    max-width: 200px !important;
+}
+
+h1::after, h2::after, h3::after, .group-title::after {
+    content: "" !important;
+    flex-grow: 1 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, var(--sc-cyan) 0%, transparent 100%) !important;
+    margin-left: 25px !important;
+    opacity: 0.4 !important;
+    max-width: 200px !important;
+}
+
+.overall-status {
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 1.5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+    border-radius: 0 !important;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 25px 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+}
+
+.overall-status.bg-success {
+    background: rgba(0, 212, 232, 0.06) !important;
+    border: 1px solid rgba(0, 212, 232, 0.4) !important;
+    color: var(--sc-cyan) !important;
+    box-shadow: 0 0 20px rgba(0, 212, 232, 0.12), inset 0 0 12px rgba(0, 212, 232, 0.06) !important;
+    text-shadow: 0 0 8px rgba(0, 212, 232, 0.7) !important;
+}
+
+.overall-status.bg-danger, .overall-status.bg-warning {
+    background: rgba(200, 32, 58, 0.08) !important;
+    border: 1px solid rgba(200, 32, 58, 0.5) !important;
+    color: var(--sc-red) !important;
+    box-shadow: 0 0 25px rgba(200, 32, 58, 0.3), inset 0 0 15px rgba(200, 32, 58, 0.1) !important;
+    text-shadow: 0 0 10px rgba(200, 32, 58, 0.8) !important;
+    animation: sc-alert-pulse 1.2s infinite !important;
+}
+
+.overall-status svg {
+    margin-right: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
+    filter: drop-shadow(0 0 8px currentColor) !important;
+}
+
+.overall-status::after {
+    content: "";
+    position: absolute;
+    top: -50px; left: -100%; width: 30%; height: 200px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+    transform: skewX(-20deg);
+    animation: sc-scan 6s infinite linear;
+    pointer-events: none;
+}
+
+.incident {
+    background: var(--sc-panel) !important;
+    border: 1px solid rgba(200, 32, 58, 0.3) !important;
+    border-radius: 0 !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    padding: 25px !important;
+    margin-bottom: 30px !important;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 15px, 15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%) !important;
+    display: block !important;
+}
+
+.incident::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(to bottom, var(--sc-red), transparent 80%);
+    box-shadow: 1px 0 10px rgba(200, 32, 58, 0.4);
+    z-index: 10;
+}
+
+.incident-list h1, .incident-list h2, .incident-list h3, .incident-list h4,
+.incident h1, .incident h2, .incident h3, .incident h4,
+.incident .title, .incident .title a, .incident .title span,
+.incident-title, .incident-title a, .incident-title span,
+.incident-list .text-dark, .incident-list .text-black,
+.incident .text-dark, .incident .text-black {
+    color: var(--sc-red) !important;
+    text-decoration: none !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    letter-spacing: 2px !important;
+    text-shadow: 0px 0px 8px rgba(200, 32, 58, 0.5) !important;
+    display: block !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgba(200, 32, 58, 0.3) !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 15px !important;
+    white-space: normal !important;
+}
+
+.incident-list h1 a:hover, .incident-list h2 a:hover, .incident-list h3 a:hover, .incident-list h4 a:hover,
+.incident .title a:hover, .incident-title a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(200, 32, 58, 0.9) !important;
+}
+
+.incident-list h1::before, .incident-list h2::before, .incident-list h3::before, .incident-list h4::before,
+.incident .title::before, .incident-title::before {
+    content: "[ EVENT_LOG ] // " !important;
+    color: var(--sc-yellow) !important;
+    font-size: 0.9rem !important;
+    text-shadow: none !important;
+    opacity: 0.75 !important;
+    letter-spacing: 1px !important;
+    vertical-align: middle !important;
+}
+
+.incident .content, .incident .description, .incident p,
+.incident span:not(.badge), .incident div, .markdown-body {
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9) !important;
+    white-space: pre-wrap !important;
+    position: relative;
+    z-index: 20;
+}
+
+.incident a {
+    color: var(--sc-cyan) !important;
+    text-decoration: underline !important;
+}
+
+.incident .date {
+    display: inline-block !important;
+    color: var(--sc-yellow) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    background: rgba(232, 184, 0, 0.08) !important;
+    border: 1px solid rgba(232, 184, 0, 0.3) !important;
+    padding: 4px 10px !important;
+    margin-bottom: 15px !important;
+    text-shadow: 0 0 5px rgba(232, 184, 0, 0.5) !important;
+    border-radius: 0 !important;
+}
+.title-section {
+  display: flex !important;
+  align-items: center !important;
+  position: static !important;
+}
+
+[data-testid="group-name"] {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.title-section svg {
+  position: relative !important;
+  z-index: 2 !important;
+  flex-shrink: 0 !important;
+}
