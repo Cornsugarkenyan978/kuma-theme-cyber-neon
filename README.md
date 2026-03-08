@@ -9,7 +9,7 @@ Since this removes the default icon and title text from view, set your desired s
 1. Copy your chosen variant into Uptime Kuma's custom CSS block.
 2. Find the header line with ctrl+f or however and change the text between the brackets to whatever you want:
 
-       content: "[ YOUR DOMAIN // CHANGE TO ANYTHING IN THIS SPACE ]" !important;
+       content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
 
 Group titles are left-aligned by default. To center them, paste this at the end of the theme or view centered-titles.css (same thing):
 
