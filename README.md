@@ -40,6 +40,27 @@ Group titles are left-aligned by default, except for Darkmode. To center them, p
   flex-shrink: 0 !important;
 }
 ```
+If you want a thematic format for your description, like I have set for mine here is that code and preview is below, change up the text of course.
+
+```html
+<div style="text-align:center;font-family:'JetBrains Mono',monospace;max-width:700px;margin:0 auto;padding:10px 0;">
+<span style="font-family:'Orbitron',sans-serif;color:#00f0ff;font-size:1.1rem;letter-spacing:6px;text-shadow:0 0 10px #00f0ff;">
+SUDOCAT // PUBLIC UPTIME DISCLOSURE
+</span>
+<br><br>
+<span style="color:#aaa;font-size:0.85rem;letter-spacing:2px;line-height:2;">
+This feed is provided as a courtesy.<br>
+Infrastructure events are classified until resolved.<br>
+</span>
+<br>
+<span style="color:#ff2a85;font-size:0.85rem;letter-spacing:2px;line-height:2;text-shadow:0 0 8px #ff2a85;">
+Your patience is noted. Your frustration is irrelevant.<br>
+All services will be restored in due course.
+</span>
+</div>
+```
+
+
 
 ### Save and enjoy!
 
@@ -52,6 +73,8 @@ Group titles are left-aligned by default, except for Darkmode. To center them, p
 **Darkmode 3 wide**
 ![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-darkmode.png?raw=true))
 
+**Thematic description formatting?**
+<img width="1300" height="570" alt="image" src="https://github.com/user-attachments/assets/8a9cb146-9b37-4f0b-9bcd-b4eeadb404fc" />
 
 
 
