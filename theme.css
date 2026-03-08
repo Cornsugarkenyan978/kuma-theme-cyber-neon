@@ -6,7 +6,6 @@
     --v3-dark: #090a0f;
 }
 
-/* base overrides */
 body, html, #app, .bg-dark, .bg-light, .status-page {
     background-color: var(--v3-dark) !important;
     background-image: 
@@ -20,7 +19,6 @@ body, html, #app, .bg-dark, .bg-light, .status-page {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* remove kuma default card styling */
 .shadow-box, .card, .monitor-list > div,
 .incident-list, .incident-wrapper, .incident-container, .status-page .shadow-box {
     background: transparent !important;
@@ -28,7 +26,6 @@ body, html, #app, .bg-dark, .bg-light, .status-page {
     box-shadow: none !important;
 }
 
-/* custom header replacement */
 .navbar-brand img, .navbar-brand svg, .navbar-brand span, 
 .user-avatar, .user-avatar img, .user-avatar svg,
 header .dropdown-toggle svg, header .dropdown-toggle img,
@@ -79,7 +76,6 @@ header .container, header .container-fluid, .status-page .header .container {
         sys-core-glitch 5s infinite linear !important;
 }
 
-/* header animations */
 @keyframes sys-core-pulse {
     0% { filter: drop-shadow(0 0 5px var(--v3-cyan)); }
     100% { filter: drop-shadow(0 0 20px var(--v3-cyan)) drop-shadow(0 0 10px var(--v3-pink)); }
@@ -107,7 +103,6 @@ header .container, header .container-fluid, .status-page .header .container {
     }
 }
 
-/* grid layout */
 .monitor-list, .service-status-list {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
@@ -115,7 +110,6 @@ header .container, header .container-fluid, .status-page .header .container {
     padding: 20px !important;
 }
 
-/* node cards */
 .item, .service-item {
     position: relative !important;
     background: linear-gradient(135deg, rgba(16, 18, 27, 0.85) 0%, rgba(6, 7, 10, 0.95) 100%) !important;
@@ -159,7 +153,6 @@ header .container, header .container-fluid, .status-page .header .container {
     z-index: 100;
 }
 
-/* node text layout fix */
 .item .row, .service-item .row {
     display: flex !important;
     flex-direction: column !important;
@@ -194,7 +187,6 @@ header .container, header .container-fluid, .status-page .header .container {
     z-index: 20;
 }
 
-/* scanner animation */
 .item-name::before, .service-name::before {
     content: "";
     position: absolute;
@@ -211,7 +203,6 @@ header .container, header .container-fluid, .status-page .header .container {
     100% { left: 250%; }
 }
 
-/* metrics */
 .item .info, .service-item .info, .uptime, .ping {
     color: #ffffff !important;
     font-family: 'JetBrains Mono', monospace !important;
@@ -228,7 +219,6 @@ header .container, header .container-fluid, .status-page .header .container {
     opacity: 1 !important;
 }
 
-/* charts */
 .chart-wrapper canvas, canvas {
     filter: drop-shadow(0px 0px 5px var(--v3-pink)) !important;
     opacity: 0.95;
@@ -238,7 +228,6 @@ header .container, header .container-fluid, .status-page .header .container {
     width: 100% !important;
 }
 
-/* status badges */
 .badge {
     font-family: 'Orbitron', sans-serif !important;
     font-size: 0.75rem !important;
@@ -302,7 +291,6 @@ header .container, header .container-fluid, .status-page .header .container {
     75% { transform: translateX(1px) skewX(-2deg); }
 }
 
-/* group headers */
 h1, h2, h3, .group-title {
     font-family: 'Orbitron', sans-serif !important;
     font-weight: 700 !important;
@@ -346,7 +334,6 @@ h1::after, h2::after, h3::after, .group-title::after {
     max-width: 200px !important;
 }
 
-/* public page status banner */
 .overall-status {
     font-family: 'Orbitron', sans-serif !important;
     font-weight: 900 !important;
@@ -407,7 +394,6 @@ h1::after, h2::after, h3::after, .group-title::after {
     pointer-events: none;
 }
 
-/* incidents */
 .incident {
     background: rgba(12, 14, 22, 0.85) !important;
     border: 1px solid rgba(255, 42, 133, 0.3) !important;
@@ -433,7 +419,6 @@ h1::after, h2::after, h3::after, .group-title::after {
     z-index: 10;
 }
 
-/* incident title overrides */
 .incident-list h1, .incident-list h2, .incident-list h3, .incident-list h4,
 .incident h1, .incident h2, .incident h3, .incident h4,
 .incident .title, .incident .title a, .incident .title span,
@@ -472,7 +457,6 @@ h1::after, h2::after, h3::after, .group-title::after {
     vertical-align: middle !important;
 }
 
-/* incident content layout */
 .incident .content, .incident .description, .incident p, 
 .incident span:not(.badge), .incident div, .markdown-body {
     color: #ffffff !important;
