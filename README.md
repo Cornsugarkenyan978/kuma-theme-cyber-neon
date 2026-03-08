@@ -43,13 +43,13 @@ Group titles are left-aligned by default, except for Darkmode. To center them, p
 ### Save and enjoy!
 
 **Full-sized 3 wide**
-[![Cyber Neon Demo](https://raw.githubusercontent.com/Sayamew/kuma-theme-cyber-neon/main/cyber-neon-full.png)](https://youtu.be/x27mJT_q5PA)
+[![Cyber Neon Demo](https://raw.githubusercontent.com/Sayamew/kuma-theme-cyber-neon/main/previews/cyber-neon-full.png)](https://youtu.be/x27mJT_q5PA)
 
 **Compact 4 wide**
-![Cyber Neon Compact](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/cyber-neon-compact.png?raw=true)
+![Cyber Neon Compact](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-neon-compact.png?raw=true)
 
 **Darkmode 3 wide**
-![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/cyber-darkmode.png?raw=true))
+![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-darkmode.png?raw=true))
 
 
 
