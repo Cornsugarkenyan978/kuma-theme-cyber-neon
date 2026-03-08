@@ -3,7 +3,8 @@
 This theme comes in three variants, the standard 3-wide, now in darkmode also that is not very dense and a compacted 4-wide variant! Choose whatever flavor you like. If there are any issues or you want darkmode compact since that was me messing around please let me know.
 
 ## IMPORTANT
-Since this removes the default icon and title text from view, set your desired site icon and title to what you want in navbar prior to applying it! then you can move forward to the next steps.
+Since this removes the default icon and title text from view, set your desired site icon and delete the title prior to applying it! then you can move forward to the next steps.
+*there is currently an issue where the title appears to right. working on fixing that**
 
 ### Usage
 1. Copy your chosen variant into Uptime Kuma's custom CSS block.
