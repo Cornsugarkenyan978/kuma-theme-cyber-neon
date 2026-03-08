@@ -3,8 +3,15 @@
 This theme comes in three variants, the standard 3-wide, now in darkmode also that is not very dense and a compacted 4-wide variant! Choose whatever flavor you like. If there are any issues or you want darkmode compact since that was me messing around please let me know.
 
 ## IMPORTANT
-Since this removes the default icon and title text from view, set your desired site icon and delete the title prior to applying it! then you can move forward to the next steps.
-*there is currently an issue where the title appears to right if you do not leave it blank. working on fixing that**
+Since this removes the default icon and title text from view, set your desired site icon prior to applying it! then you can move forward to the next steps.
+
+### ISSUES
+1. Using a title will still display it to the right of the themed one if you are on an older version, you will need to inspect the title and replace the Vue data-v-xxxx with the correct ones in the below code which then goes at the end of the theme css. This also will apply if theme does not get updated for new releases fast enough.
+```css
+span[data-v-7d4a7f28][data-v-007873bc] {
+    display: none !important;
+}
+```
 
 ### Usage
 1. Select Dark as the page preference instead of automatic or light.
