@@ -183,10 +183,9 @@ header .container, header .container-fluid, .status-page .header .container {
 }
 
 .item:hover, .service-item:hover {
-    transform: translateY(-3px) scale(1.01);
-    background: linear-gradient(135deg, rgba(25, 28, 40, 0.95) 0%, rgba(10, 12, 18, 0.95) 100%) !important;
-    filter: drop-shadow(0 8px 12px rgba(0, 240, 255, 0.15));
-    z-index: 100;
+    background: linear-gradient(135deg, rgba(25, 28, 40, 0.95) 0%, rgba(10, 12, 18, 0.95) 100%) !important;
+    filter: drop-shadow(0 0px 15px rgba(0, 240, 255, 0.4));
+    z-index: 100;
 }
 .item .row, .service-item .row {
     display: flex !important;
