@@ -71,7 +71,7 @@ All services will be restored in due course.
 ![Cyber Neon Compact](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-neon-compact.png?raw=true)
 
 **Darkmode 3 wide**
-![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-darkmode.png?raw=true))
+![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-darkmode.png?raw=true)
 
 **Thematic description formatting?**
 <img width="1300" height="570" alt="image" src="https://github.com/user-attachments/assets/8a9cb146-9b37-4f0b-9bcd-b4eeadb404fc" />
