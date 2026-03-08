@@ -4,7 +4,7 @@ This theme comes in three variants, the standard 3-wide, now in darkmode also th
 
 ## IMPORTANT
 Since this removes the default icon and title text from view, set your desired site icon and delete the title prior to applying it! then you can move forward to the next steps.
-*there is currently an issue where the title appears to right. working on fixing that**
+*there is currently an issue where the title appears to right if you do not leave it blank. working on fixing that**
 
 ### Usage
 1. Copy your chosen variant into Uptime Kuma's custom CSS block.
