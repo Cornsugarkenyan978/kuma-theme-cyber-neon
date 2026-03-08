@@ -59,7 +59,7 @@ header .container, header .container-fluid, .status-page .header .container {
 }
 
 .navbar-brand::after, .logo-wrapper::after {
-    content: "[ **YOUR DOMAIN** // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
+    content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
     position: relative !important;
     color: #ffffff !important;
     font-family: 'Orbitron', sans-serif !important;
