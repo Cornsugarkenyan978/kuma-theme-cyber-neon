@@ -11,3 +11,5 @@ Navigate to this section to change domain header text to anything you want:
  Then hit save and enjoy!
 
 Demo at: https://status.sudocat.dev/
+
+3/7- Currently working on fixing grid width
