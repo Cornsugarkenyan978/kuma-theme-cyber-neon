@@ -1,4 +1,5 @@
 This theme completely removes the stock header and icon!
+Gemini Pro did a lot of the lifting unfortunately to "break" kuma enough to work this way.
 
 **PLEASE SET DESIRED ICON & TITLE FOR SITE PRIOR TO USING THIS**
 
