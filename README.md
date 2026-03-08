@@ -9,3 +9,5 @@ Navigate to this section to change domain header text to anything you want:
  content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
 
  Then hit save and enjoy!
+
+Demo at: https://status.sudocat.dev/
