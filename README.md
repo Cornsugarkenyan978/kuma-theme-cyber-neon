@@ -1,7 +1,5 @@
 This theme completely removes the stock header and icon! (click for youtube video with animations)
 
-[![Cyber Neon Demo](https://raw.githubusercontent.com/Sayamew/kuma-theme-cyber-neon/main/cyber-neo-3grid.png)](https://youtu.be/x27mJT_q5PA)
-
 **PLEASE SET DESIRED ICON & TITLE FOR SITE PRIOR TO USING THIS**
 
 Navigate to this section to change domain header text to anything you want:
@@ -10,6 +8,6 @@ Navigate to this section to change domain header text to anything you want:
 
  Then hit save and enjoy!
 
-Demo at: https://status.sudocat.dev/
+[![Cyber Neon Demo](https://raw.githubusercontent.com/Sayamew/kuma-theme-cyber-neon/main/cyber-neo-3grid.png)](https://youtu.be/x27mJT_q5PA)
 
-3/7- Currently working on fixing grid width
+
