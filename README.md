@@ -1,6 +1,6 @@
 # Cyber Neon for Uptime-Kuma (tested up to 2.2.0)
 
-This theme comes in two variants, the standard 3-wide that is not very dense and a compacted 4-wide variant! Choose whatever flavor you like. If there are any issues please let me know. If you want group titles centered read below.
+This theme comes in three variants, the standard 3-wide, now in darkmode also that is not very dense and a compacted 4-wide variant! Choose whatever flavor you like. If there are any issues or you want darkmode compact since that was me messing around please let me know.
 
 ## IMPORTANT
 Since this removes the default icon and title text from view, set your desired site icon and title to what you want in navbar prior to applying it! then you can move forward to the next steps.
@@ -11,7 +11,11 @@ Since this removes the default icon and title text from view, set your desired s
 
        content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
 
-Group titles are left-aligned by default. To center them, paste this at the end of the theme or view centered-titles.css (same thing):
+   If you selected darkmode:
+
+        content: "[ SUDOCAT.DEV // SYS_STATUS ]" !important;
+
+Group titles are left-aligned by default, except for Darkmode. To center them, paste this at the end of the theme or view centered-titles.css (same thing):
 
 ```css
 .title-section {
@@ -43,6 +47,10 @@ Group titles are left-aligned by default. To center them, paste this at the end 
 
 **Compact 4 wide**
 ![Cyber Neon Compact](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/cyber-neon-compact.png?raw=true)
+
+**Darkmode 3 wide**
+![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/cyber-darkmode.png?raw=true))
+
 
 
 
