@@ -172,6 +172,7 @@ header .container, header .container-fluid, .status-page .header .container {
     background: linear-gradient(to bottom, var(--v3-cyan), transparent, var(--v3-pink));
     box-shadow: 2px 0 15px var(--v3-cyan);
     z-index: 10;
+    pointer-events: none !important;
 }
 
 .item::after, .service-item::after {
@@ -183,6 +184,7 @@ header .container, header .container-fluid, .status-page .header .container {
     color: rgba(255, 255, 255, 0.2);
     letter-spacing: 2px;
     z-index: 10;
+    pointer-events: none !important;
 }
 
 .item:hover, .service-item:hover {
@@ -531,4 +533,52 @@ h1::after, h2::after, h3::after, .group-title::after {
 }
 span[data-v-7d4a7f28][data-v-007873bc] {
     display: none !important;
+}
+
+.item:hover .item-name, 
+.service-item:hover .service-name,
+.item:hover .item-name span, 
+.service-item:hover .service-name span {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+}
+
+.item, .service-item {
+    transition: background 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.item:hover, .service-item:hover {
+    transform: none !important; 
+    filter: none !important;
+    box-shadow: inset 0 0 45px rgba(0, 240, 255, 0.3) !important;
+}
+
+.item-name .marquee-text-wrap, 
+.item-name .marquee-text-content, 
+.item-name .marquee-text-text,
+.service-name .marquee-text-wrap, 
+.service-name .marquee-text-content, 
+.service-name .marquee-text-text {
+    animation: none !important;
+    transform: none !important;
+    width: 100% !important;
+    display: block !important;
+    white-space: normal !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.item-name *, .service-name * {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    display: inline !important;
+}
+
+.item-name:hover, .service-name:hover {
+    opacity: 1 !important;
 }
