@@ -12,6 +12,7 @@ span[data-v-7d4a7f28][data-v-007873bc] {
     display: none !important;
 }
 ```
+2. Webkit & Firefox made node names hover on vanish, along with up/down status pills desyncing from their position. Latest update fixes this behavior, if you still see odd interactions let me know in Issues.
 
 ### Usage
 1. Select Dark as the page preference instead of automatic or light.
